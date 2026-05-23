@@ -1,25 +1,23 @@
-🔍 EDR Demo – SOC Analyst Workflow
-📌 Overview
+# 🔍 EDR Demo – SOC Analyst Workflow
+
+## 📌 Overview
 In this exercise, I worked with an Endpoint Detection and Response (EDR) system to understand how a SOC Analyst investigates security alerts.
 
-🔎 What I Did
+---
 
+## 🔎 What I Did
 
-I accessed the EDR dashboard
+- Accessed the EDR dashboard  
+- Reviewed multiple alerts and explored their details  
+- Analyzed process activity and behavioral patterns shown by the system  
+- Observed how alerts are investigated in a real SOC environment  
 
+---
 
-I reviewed multiple alerts and explored their details
+## 📸 Screenshots
+I have attached screenshots showing how I navigated the EDR console and identified the required information. Refer to them for a clearer understanding of my process.
 
+---
 
-I analyzed process activity and behavior shown by the system
-
-
-I observed how alerts are investigated in a real SOC environment
-
-
-
-📸 Screenshots
-I have attached screenshots to show how I navigated the EDR console and identified the required information. Refer to them for a clearer understanding of my process.
-
-✅ Conclusion
+## ✅ Conclusion
 This is a basic demo demonstrating how I used an EDR system and how a SOC Analyst typically interacts with alerts during investigation.
