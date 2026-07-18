@@ -38,9 +38,12 @@ The attack shows a fully matured threat actor operating with precision across mu
 ## 📸 Screenshots
 
 ### Stage 1 Payload, Execution, Persistance
+#### Payload
 ![Payload 1](MEI_2.png)
+---
 #### Execution
 ![execution](MEI_3.png)
+---
 #### Persistence
 ![Persistence](MEI_4.png)
 ---
