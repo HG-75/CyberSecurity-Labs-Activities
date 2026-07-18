@@ -78,4 +78,37 @@ This challenge provided valuable hands-on experience with real-world SOC workflo
 
 # 📸 Screenshots
 
-Refer to the screenshots available in the repository for a visual walkthrough of the investigation process and findings.
+### POST Requests
+![post](ATE_1.png)
+---
+
+### User-agent made POST req
+![User-agent](ATE_2.png)
+---
+
+### Command Running errorEE.aspx
+![cmd](ATE_3.png)
+---
+
+### New user Account
+![new user](ATE_7.png)
+---
+
+### Command to Add new account to  RDP
+![RDP](ATE_8.png)
+---
+
+### Powershell command Ran by attacker
+![powershell](ATE_10.png)
+---
+
+### name of tha archieve created by the attacker
+![archeive](ATE_11.png)
+---
+
+### Result
+![Result 1](Result1.png)
+
+![Result 2](Result2.png)
+
+![Result 3](Result3.png)

@@ -25,7 +25,31 @@ In this lab, I worked with the Elastic Stack (ELK) to understand how a Security 
 ---
 
 ## 🖼️ Screenshots
-Refer to the `elastic-soc-screenshots` folder for a detailed step-by-step view of my work and findings.
+
+### IP having Max Number of connection
+![IP](ESS_2.png)
+---
+
+### User Responsible for max traffic
+![responsible](ESS_3.png)
+---
+
+### user with failed attempts
+![failed](ESS_9.png)
+---
+
+### Wrong Vpn connection attempts
+![vpn](ESS_10.png)
+---
+
+### Result
+![Result 1](Result1.png)
+
+![Result 1.1](Result1.1.png)
+
+![Result 2](Result2.png)
+
+![Result 3](Result3.png)
 
 ---
 

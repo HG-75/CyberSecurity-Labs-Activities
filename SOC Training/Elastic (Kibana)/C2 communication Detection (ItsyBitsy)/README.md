@@ -37,4 +37,27 @@
 
 ## 📸 Screenshots
 
-📂 Please refer to the attached screenshots in this directory.
+### Suspected User IP
+![IP](C2_detection_2.png)
+---
+
+### C2 server
+![c2](C2_detection_3.png)
+---
+
+### Filesharing Site
+![filesharing](C2_detection_4.png)
+---
+
+### Full URL of C2 Server
+![URL](C2_detection_5.png)
+---
+
+### file accessed from Filesharing site 
+![file](C2_detection_6.png)
+---
+
+### Result
+![Result 1](Result1.png)
+
+![Result 1.1](Result1.1.png)
