@@ -46,7 +46,7 @@ The activity matches normal Zoom usage and shows no signs of data exfiltration.
 
 **Final Verdict:** False Positive
 
-**Screenshot:** Refer to the screenshot for details.
+**Screenshot:** ![Alert 1](Alert2.png)
 
 ---
 
@@ -82,7 +82,7 @@ This behavior is consistent with **malware delivery techniques**.
 - Perform a full malware scan.  
 - Provide user awareness training.  
 
-**Screenshot:** Refer to the screenshot for details.
+**Screenshot:** ![Alert 2](Alert3.png)
 
 ---
 
@@ -110,8 +110,12 @@ The activity is legitimate and expected for a developer.
 
 **Final Verdict:** False Positive
 
-**Screenshot:** Refer to the screenshot for details.
+**Screenshot:** ![Alert 3](Alert4.png)
 
+---
+
+## Result 
+![Result](Result.png)
 ---
 
 ## Skills Demonstrated
