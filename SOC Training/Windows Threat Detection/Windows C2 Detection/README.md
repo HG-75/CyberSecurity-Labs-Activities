@@ -131,7 +131,7 @@ Windows provides rich telemetry through Sysmon and Security Logs, allowing defen
 ## 📸 Screenshots
 
 ### Malicious Zip file (Ground Zero)
-![Malicious Zip File](C2_detection_1.png)
+![Malicious Zip File](C2_ detection_1.png)
 ---
 ### Hiding the Malware
 ![Hiding the Malware](C2_detection_2.png)
