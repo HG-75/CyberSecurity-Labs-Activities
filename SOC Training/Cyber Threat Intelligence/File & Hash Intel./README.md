@@ -56,4 +56,59 @@ File and hash intelligence transforms a raw alert into actionable context. Heuri
 
 ## 📸 Screenshots
 
-Please refer to the attached screenshots in this directory.
+### Bl0gger.exe
+![hash](intel_2.png)
+---
+### Tags to Identify Bl0gger.exe
+![tags](intel_9.png_)
+
+### TCL (threat classfication label)
+![TCL](intel_3.png)
+---
+
+### MITRE Technique For Morse-Code-Analyzer
+![MITRE tech](intel_8.png)
+---
+
+### Stealth Command Line Execution from file
+![SCL](intel_10.png)
+---
+
+### New process
+![New process](intel_11.png)
+---
+
+### Malware Masquerading a Window File
+![name of file](intel_12.png)
+---
+
+###  SHA256 of All tha malicious Files
+![SHA256](intel_15.png)
+---
+
+### Payload.exe File
+![file](intel_1.png)
+---
+
+### Label of the file payload
+![label](intel_16.png)
+---
+
+### Execution of Malicious File
+![execution](intel_18.png)
+---
+
+### Command Used
+![cmd](intel_19.png)
+---
+
+### MITRE ATT&Ck ID Associated
+![ID](intel_20.png)
+---
+
+### Result
+![Result 1](Result1.png)
+
+![Result 2](Result2.png)
+
+![Result 3](Result3.png)
