@@ -130,7 +130,50 @@ Windows provides rich telemetry through Sysmon and Security Logs, allowing defen
 
 ## 📸 Screenshots
 
-Refer to the screenshots included in this repository for detailed investigation evidence and findings.
+### Malicious Zip file (Ground Zero)
+![Malicious Zip File](C2_detection_1.png)
+---
+### Hiding the Malware
+![Hiding the Malware](C2_detection_2.png)
+---
+### Malicious Domain
+![Malicious Domain](C2_detection_3.png)
+---
+### Failed Login Attempts (6)
+![Failed Login Attempts](C2_detection_4.png)
+---
+### Attacker's User Account
+![Attacker's Account](C2_detection_5.png)
+---
+### Adding User To Privilaged Group
+![Privilaged Group](C2_detection_6.png)
+---
+### Service to Persist Nessie Malware
+![Nessie malware](C2_detection_7.png)
+---
+### Troy Malware Detection
+![Troy Malware](C2_detection_9.png)
+---
+### Kitten.exe Detection
+![Kitten Malware](C2_detection_13.png)
+
+![Kitten Malware](C2_detection_14.png)
+---
+### Odin.exe Detection
+![Odin Malware](C2_detection_11.png)
+
+![Oden Malware](C2_detection_12.png)
+---
+
+### Results
+![Result 1](Result.png)
+
+![Result 2](Result2.png)
+
+![Result 3](Result3.png)
+
+![Result 4](Result4.png)
+
 
 ---
 
