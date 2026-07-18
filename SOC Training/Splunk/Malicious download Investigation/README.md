@@ -32,4 +32,35 @@
 
 ## 📸 Screenshots
 
-📌 Please refer to the screenshots for more details.
+### Imposter User
+![Imposter](MDI_2.png)
+---
+
+### Infected User
+![Infected user](MDI_4.png)
+---
+
+### Tool to download Payload
+![Tool](MDI_5.png)
+---
+
+### 3rd Part Site to Access Payload
+![Site](MDI_7.png)
+---
+
+### C2 Server
+![C2 server](MDI_8.png)
+---
+
+### Malicious Content
+![Mal Content](MDI_9.png)
+---
+
+### Infected URL
+![URL Infected](MDI_10.png)
+---
+
+### Result
+![Result 1](Result1.png)
+
+![Result 1.1](Result1.1.png)
