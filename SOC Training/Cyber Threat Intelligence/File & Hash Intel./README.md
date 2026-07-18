@@ -60,7 +60,7 @@ File and hash intelligence transforms a raw alert into actionable context. Heuri
 ![hash](intel_2.png)
 ---
 ### Tags to Identify Bl0gger.exe
-![tags](intel_9.png_)
+![tags](intel_9.png)
 
 ### TCL (threat classfication label)
 ![TCL](intel_3.png)
