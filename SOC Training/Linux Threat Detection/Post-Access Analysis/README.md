@@ -99,6 +99,45 @@ Used for:
 
 ## 📸 Screenshots
 
-All supporting screenshots can be found in the attached screenshots directory.
-
+### Detecting System Cloud
+![cloud](PAA_1.png)
 ---
+
+### Detecting Antimalware Binary
+![AMB](PAA_2.png)
+---
+
+### Discovery command 
+![DC](PAA_4.png)
+---
+
+### script Author email
+![author](PAA_5.png)
+---
+
+### path to download helper.sh script
+![helper](PAA_7.png)
+---
+
+### Brute force IP
+![bruteforce](PAA_8.png)
+---
+
+### malicious archieve transferred via SCP
+![SCP](PAA_11.png)
+---
+
+### cryptominer
+![cryptominer](PAA_12.png)
+---
+
+### Result
+![Result 1](Result_1.png)
+
+![Result 2](Result_2.png)
+
+![Result 3](Result_3.png)
+
+![Result 4](Result_4.png)
+
+![Result 5](Result_5.png)
