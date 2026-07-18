@@ -120,4 +120,60 @@ VPN and proxy detection provide additional context during investigations and hel
 
 # 📸 Screenshots
 
-📷 **Refer to the screenshots available in the repository for the complete investigation process and findings.**
+## IP (2.58.56.60)
+---
+### Country it based in
+![country](intel_3.png)
+---
+
+### C2 server hosting ip
+![C2](intel_4.png)
+---
+
+### Autonomous System it belongs
+![ASN](intel_5.png)
+---
+
+### Tags attributed to ASN
+![tags](intel_6.png)
+---
+
+## IP (64.89.160.44)
+---
+### Service exposed
+![service](intel_7.png)
+---
+
+### Ports Open
+![port](intel_8.png)
+---
+
+### port which leaks C2 server
+![C2 server](intel_9.png)
+---
+
+## IP (35.188.105.97)
+
+![Ipaddress](intel_11.png)
+---
+
+### Cloud Server 
+![Cloud](intel_12.png)
+---
+
+### Country hosting malicious server
+![mal country](intel_13.png)
+---
+
+### Attacker's Server OS
+![Server OS](intel_15.png)
+---
+
+### Result
+![Result 1](Result1.png)
+
+![Result 2](Result2.png)
+
+![Result 3](Result3.png)
+
+![Result 4](Result4.png)

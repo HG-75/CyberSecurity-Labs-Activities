@@ -50,4 +50,42 @@ Threat intelligence investigations rarely stop at a single indicator. Each hash 
 
 ## 📸 Screenshots
 
-📁 Please refer to the attached screenshots in this directory.
+### File Name, Type, Execution Parent, Dropped File
+#### Name
+![name](Chal_1.png)
+
+#### Type
+![type](Chal_2.png)
+
+#### Execution Parent 
+![Parent](Chal_3.png)
+
+#### Dropped File
+![Dropped file](Chal_4.png)
+
+---
+
+### Malicious Dropped Files
+![mal files](Chal_5.png)
+---
+
+### Files Related to Flagged IP
+![Flagged Ip files](Chal_6.png)
+---
+
+### Tool Used to Steal Cookies
+![cookies](Chal_8.png)
+---
+
+### Phishing Technique Used by Attacker
+![Phishing](Chal_9.png)
+---
+
+### Platform Used
+![platform](Chal_10.png)
+---
+
+###  Result
+![Result 1](Result1.png)
+
+![Result 2](Result2.png)
