@@ -55,12 +55,14 @@ After analyzing the phishing alert and writing a structured report using the Fiv
 
 All steps of my investigation and reporting process are documented with screenshots in this repository.
 
-👉 Refer to the `/screenshots` folder for:
-
 * SOC dashboard analysis
 * Alert investigation
 * Report writing process
 * Final flag confirmation
+---
+
+### Result
+![result](Result.png)
 
 ---
 
