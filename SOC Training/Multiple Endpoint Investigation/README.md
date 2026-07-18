@@ -37,4 +37,68 @@ The attack shows a fully matured threat actor operating with precision across mu
 
 ## 📸 Screenshots
 
-Please refer to the attached screenshots in this directory.
+### Stage 1 Payload, Execution, Persistance
+![Payload 1](MEI_2.png)
+#### Execution
+![execution](MEI_3.png)
+#### Persistence
+![Persistence](MEI_4.png)
+---
+
+### C2 Connection IP & Port
+#### IP
+![Ip&Port](MEI_5.png)
+#### Port
+![Ip&Port](MEI_6.png)
+---
+
+### UAC bypass
+![UAC bypass](MEI_7.png)
+---
+
+### Cred Dumping Tool
+![mimikatz tool](MEI_8.png)
+---
+
+### Username & Hash of Infected User
+#### Username
+![Username&Hash](MEI_9.png)
+#### Hash
+![hash](MEI_10.png)
+---
+
+### Remote Share File Accessed
+![filename](MEI_11.png)
+---
+
+### 2nd compromise Target
+#### Name
+![target 2](MEI_11.png)
+#### Password
+![target password](MEI_12.png)
+---
+
+### Lateral Movement machine name
+![machine name](MEI_13.png)
+
+![exe file](MEI_14.png)
+---
+
+### Credentials Dump in target
+![cred dump](MEI_15.png)
+---
+
+### 3rd  payload 
+![3rd payload](MEI_16.png)
+---
+
+### Ransomeware Link
+![Ransome Link](MEI_17.png)
+---
+
+### Result
+![Result 1](Result1.png)
+
+![Result 1.1](Result1.1.png)
+
+![Result 1.2](Result1.2.png)

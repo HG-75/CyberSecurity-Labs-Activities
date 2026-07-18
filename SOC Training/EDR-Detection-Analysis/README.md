@@ -15,7 +15,24 @@ In this exercise, I worked with an Endpoint Detection and Response (EDR) system 
 ---
 
 ## 📸 Screenshots
-I have attached screenshots showing how I navigated the EDR console and identified the required information. Refer to them for a clearer understanding of my process.
+### Tool For Payload Download
+![Tool](detection_2.png)
+---
+### Initial Access
+![Initial Access](detection_3.png)
+---
+### Credential Dumping
+![Cred Dumping](detection_5.png)
+---
+### Exfiltration Attempt 
+![data Exfil](detection_6.png)
+---
+### Threat Intelligence Lookup
+![threat intell](detection_7.png)
+---
+### Result
+![Result](Result.png)
+
 
 ---
 
