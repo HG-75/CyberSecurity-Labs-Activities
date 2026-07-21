@@ -1,131 +1,144 @@
-# Alert Handling – SIEM Investigation
+# 🚨 Alert Handling – SIEM Investigation
 
-This repository documents my hands-on experience investigating security alerts in a SIEM environment.  
-In this exercise, I analyzed **three different alerts**, determined their nature, and provided a final security verdict for each.
+## 📖 Overview
 
-The objective of this task was to practice:
+In this lab, I investigated multiple security alerts within a SIEM environment to determine whether they represented genuine security threats or legitimate user activity. Each alert was analyzed using available evidence, supporting logs, and contextual information before assigning a final analyst verdict.
 
-- Alert analysis
-- Log investigation
-- Identifying true vs false positives
-- Documenting security findings
+The exercise focused on developing practical SOC analyst skills in alert triage, evidence-based decision making, and security documentation.
 
 ---
 
-## Alerts Overview
+## 🎯 Objectives
 
-| Alert # | Alert Type                  | Verdict         |
-|---------|-----------------------------|----------------|
-| 1       | Large Data Transfer to Zoom | False Positive |
-| 2       | Double-Extension Executable | True Positive  |
-| 3       | GitHub Download             | False Positive |
-
----
-
-## Alert 1 – Large Data Transfer to Zoom
-
-**Verdict:** False Positive
-
-### Description
-This rule detects **5 GB or more of data** sent from a single device to a single destination within a day, which may indicate possible data exfiltration.
-
-### Alert Details
-- **Destination:** *.zoom.us  
-- **Source IP:** 192.168.45.66  
-- **Source Network:** UK04/MEETINGROOM  
-- **Sent Data:** 5.8 GB  
-- **Received Data:** 5.2 GB  
-
-### Analysis
-- The destination belongs to **Zoom**, a legitimate video conferencing platform.  
-- The source device is in a **meeting room network**, commonly used for video calls.  
-- High data transfer is expected during long or high-quality meetings.  
-
-### Conclusion
-The activity matches normal Zoom usage and shows no signs of data exfiltration.
-
-**Final Verdict:** False Positive
-
-**Screenshot:** ![Alert 1](Alert2.png)
+- Investigate security alerts within a SIEM platform.
+- Differentiate between True Positive and False Positive alerts.
+- Analyze supporting logs and contextual evidence.
+- Document investigation findings using SOC best practices.
+- Recommend response actions for confirmed threats.
 
 ---
 
-## Alert 2 – Double-Extension Executable
+## 🛠️ Tools Used
 
-**Verdict:** True Positive
-
-### Description
-This rule detects files with **double extensions** such as `*.pdf.exe` or `*.mp4.exe`.  
-Attackers commonly use this technique in phishing attacks to trick users into opening malicious files.
-
-### Alert Details
-- **Host:** LPT-HR-009  
-- **Process Name:** chrome.exe  
-- **User:** S.Conway  
-- **Target File:** `C:\Users\S.Conway\Downloads\cats2025.mp4.exe`  
-- **Source URL:** [https://freecatvideoshd.monster/cats2025.mp4.exe](https://freecatvideoshd.monster/cats2025.mp4.exe)  
-- **File MD5:** 14d8486f3f63875ef93cfd240c5dc10b  
-
-### Analysis
-- The file uses a **double extension** to appear as a media file.  
-- The source domain is **suspicious and untrusted**.  
-- The file was downloaded through a browser, indicating a possible phishing attempt.  
-
-### Conclusion
-This behavior is consistent with **malware delivery techniques**.
-
-**Final Verdict:** True Positive
-
-### Recommended Actions
-- Isolate the affected host.  
-- Remove the malicious file.  
-- Perform a full malware scan.  
-- Provide user awareness training.  
-
-**Screenshot:** ![Alert 2](Alert3.png)
+- 📊 SIEM Platform
+- 📄 Security Logs
+- 🔍 Alert Investigation Interface
 
 ---
 
-## Alert 3 – GitHub Download
+## 🔬 Investigation Summary
 
-**Verdict:** False Positive
+### 🔍 1. Large Data Transfer Investigation
 
-### Description
-This rule detects any download from GitHub.  
-Although GitHub may host malicious content, it is also widely used for legitimate development activities.
+Investigated a large outbound data transfer alert by reviewing:
 
-### Alert Details
-- **Accessed URL:** [https://github.com/facebook/react](https://github.com/facebook/react)  
-- **Source User:** G.Chandler  
-- **Source Host:** LPT-IT-063  
-- **Source Network:** VPN/DEVELOPERS  
+- Destination service
+- Source device
+- Network location
+- Data transfer volume
+- User context
 
-### Analysis
-- The URL points to the official **React repository**.  
-- The user belongs to the **developer network**.  
-- Downloading open-source tools is normal developer behavior.  
+**Analyst Verdict:** False Positive
 
-### Conclusion
-The activity is legitimate and expected for a developer.
-
-**Final Verdict:** False Positive
-
-**Screenshot:** ![Alert 3](Alert4.png)
+The activity was consistent with legitimate Zoom video conferencing traffic generated from a meeting room environment.
 
 ---
 
-## Result 
+### 📁 2. Double-Extension Executable Investigation
+
+Analyzed a suspicious file download to determine:
+
+- File naming conventions
+- Download source
+- User activity
+- Process responsible for the download
+- Malware delivery indicators
+
+**Analyst Verdict:** True Positive
+
+The investigation identified a malicious executable masquerading as a media file using a double-extension filename, a common phishing and malware delivery technique.
+
+---
+
+### 🌐 3. GitHub Download Investigation
+
+Reviewed a GitHub download alert by examining:
+
+- Repository accessed
+- User role
+- Device context
+- Network location
+- Business justification
+
+**Analyst Verdict:** False Positive
+
+The activity represented legitimate software development activity involving an official GitHub repository.
+
+---
+
+## 🚨 Findings
+
+The investigation demonstrated the importance of combining technical evidence with organizational context during SOC alert triage.
+
+Evidence collected during the investigation revealed:
+
+- 📹 Legitimate business activity can generate alerts that require contextual analysis.
+- 📁 Double-extension executables remain a common indicator of malware delivery.
+- 💻 User role and business function are critical when validating suspicious activity.
+- ⚖️ Accurate alert triage helps reduce false positives while ensuring genuine threats receive appropriate attention.
+
+---
+
+## 📸 Screenshots
+
+### Alert 1 – Large Data Transfer
+
+![Alert 1](Alert2.png)
+
+---
+
+### Alert 2 – Double-Extension Executable
+
+![Alert 2](Alert3.png)
+
+---
+
+### Alert 3 – GitHub Download
+
+![Alert 3](Alert4.png)
+
+---
+
+### Result
+
 ![Result](Result.png)
----
-
-## Skills Demonstrated
-- SIEM alert investigation  
-- Log analysis  
-- Threat identification  
-- Incident response reasoning  
-- Security documentation  
 
 ---
 
-## Author
-**Hamza Akram**
+## 📚 Key Learnings
+
+- Effective SOC investigations rely on both technical evidence and business context.
+- Not every security alert represents malicious activity, making accurate triage essential.
+- File naming techniques such as double extensions remain common malware delivery methods.
+- User roles and expected behavior help distinguish legitimate activity from potential threats.
+- Clear documentation supports consistent decision-making and efficient incident response.
+
+---
+
+## 📚 Skills Gained
+
+- 📊 SIEM Alert Investigation
+- 🔍 Alert Triage
+- 📄 Log Analysis
+- 🛡️ Threat Detection
+- ⚖️ True Positive & False Positive Classification
+- 📁 Malware Delivery Analysis
+- 📝 Security Documentation
+- 🚨 Incident Investigation
+- 🧠 Analytical Thinking
+- 🛡️ SOC Operations
+
+---
+
+> QXV0aG9yOiBodHRwczovL2dpdGh1Yi5jb20vSEctNzU=
+

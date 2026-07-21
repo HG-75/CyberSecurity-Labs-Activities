@@ -1,7 +1,10 @@
 # 🔍 SIEM Log Analysis & Correlation
 
 ## 📖 Overview
-As a SOC analyst, understanding how different log sources work together is essential for identifying malicious activity and compromised assets. In this room, I explored how Security Information and Event Management (SIEM) platforms help analysts investigate and correlate events from multiple data sources.
+
+In this lab, I explored how Security Information and Event Management (SIEM) platforms help SOC analysts collect, normalize, and correlate events from multiple log sources to identify malicious activity and compromised assets.
+
+Using Splunk SIEM and SPL queries, I investigated events across Windows, Linux, web, and network logs to understand how log correlation improves threat detection and incident investigations.
 
 ---
 
@@ -10,7 +13,7 @@ As a SOC analyst, understanding how different log sources work together is essen
 - 📥 Discover various data sources that are ingested into a SIEM.
 - 🔗 Understand the importance of log correlation.
 - 🖥️ Learn the value of Windows, Linux, Web, and Network logs during investigations.
-- 🕵️ Practice analyzing malicious behavior.
+- 🕵️ Practice investigating malicious activity through log correlation.
 
 ---
 
@@ -24,35 +27,35 @@ As a SOC analyst, understanding how different log sources work together is essen
 ## 📂 Log Sources Explored
 
 ### 🪟 Windows Logs
+
 - Windows Event Logs
 - Sysmon Logs
 - Useful for detecting process creation, network connections, and suspicious activity.
 
 ### 🐧 Linux Logs
+
 - System and authentication logs
 - Helpful for identifying unauthorized access and suspicious commands.
 
 ### 🌐 Web Logs
+
 - HTTP requests and responses
 - Useful for investigating web attacks and malicious traffic.
 
 ### 🌐 Network Logs
+
 - Network activity and communication data
 - Valuable for tracing connections and identifying suspicious behavior.
 
 ---
 
-## 📚 What I Learned
+## 📚 Key Learnings
 
-✅ Explored the importance of SIEM during log analysis.
-
-✅ Learned how Splunk queries can be used to detect malicious behaviors.
-
-✅ Gained an introduction to log correlation and normalization.
-
-✅ Understood the significance of combining multiple log sources to obtain a complete picture during investigations.
-
-✅ Practiced analyzing events to identify malicious activity.
+- Explored the role of SIEM platforms in security monitoring and investigations.
+- Used SPL queries to identify malicious behavior across multiple log sources.
+- Gained practical experience with log correlation and normalization.
+- Understood how combining Windows, Linux, web, and network logs provides greater investigative context.
+- Strengthened analytical skills by investigating security events across multiple data sources.
 
 ---
 
@@ -74,8 +77,62 @@ As a SOC analyst, understanding how different log sources work together is essen
 
 ## 📸 Screenshots
 
-Refer to the screenshots in the repository.
+### Process Initiating a Suspicious Connection
+
+![Process](SLA_2.png)
 
 ---
 
-⭐ This room strengthened my understanding of SIEM operations and highlighted the importance of correlating logs from multiple sources to efficiently detect and investigate security incidents.
+### Scheduled Task Name
+
+![Schtask](SLA_4.png)
+
+---
+
+### Privilege Escalation
+
+![privilege](SLA_6.png)
+
+---
+
+### Attacker IP Address
+
+![IP](SLA_7.png)
+
+---
+
+### Persistence Mechanism Connection Port
+
+![persistence](SLA_9.png)
+
+---
+
+### Tool Used by the Attacker
+
+![Tool](SLA_12.png)
+
+---
+
+### Brute Force
+
+![Brute Force](Brute_Force.png)
+
+---
+
+### Result
+
+![Result 1](Result1.png)
+
+![Result 2](Result2.png)
+
+![Result 3](Result3.png)
+
+---
+
+## ✅ Conclusion
+
+This lab strengthened my understanding of SIEM operations and demonstrated how correlating Windows, Linux, web, and network logs enables SOC analysts to detect, investigate, and respond to security incidents more effectively.
+
+---
+
+> QXV0aG9yOiBodHRwczovL2dpdGh1Yi5jb20vSEctNzU=

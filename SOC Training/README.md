@@ -15,3 +15,6 @@ Activities include:
 
 These labs provide hands-on experience in **monitoring, detecting, and responding to threats** as practiced in modern SOC environments.  
 
+---
+
+> QXV0aG9yOiBodHRwczovL2dpdGh1Yi5jb20vSEctNzU=

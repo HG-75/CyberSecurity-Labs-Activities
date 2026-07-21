@@ -27,9 +27,9 @@
 
   * ❌ Failed Logon events to detect brute-force attempts.
   * ✅ Successful Logon events to identify malicious RDP access (Logon Type 10).
-* 🌐 Identified attacker IP responsible for brute-force activity.
-* 👤 Determined compromised user account.
-* 🔗 Correlated Logon ID from Event ID 4624 for session tracking.
+* 🌐 Identified the attacker IP responsible for brute-force activity.
+* 👤 Determined the compromised user account.
+* 🔗 Correlated the Logon ID from Event ID 4624 for session tracking.
 * 👥 Reviewed user management events:
 
   * ➕ User creation
@@ -47,26 +47,80 @@
   * 🦠 Malicious file downloaded.
   * 🔗 Download URL.
   * 📂 Persistence file dropped on the host.
-  * 📡 Command & Control (C2) server IP and port.
-  * 🌍 Corresponding malicious domain.
-* 💻 Reviewed PowerShell history file:
+  * 📡 Command-and-Control (C2) server IP and port.
+  * 🌍 Associated malicious domain.
+* 💻 Reviewed PowerShell history:
 
   * 📝 Identified the first executed command.
-  * 📅 Retrieved execution date.
-  * 🚩 Located the hidden flag in user PowerShell history.
+  * 📅 Retrieved the execution date.
+  * 🚩 Located the hidden flag in the user's PowerShell history.
 
 ---
 
 ## 📚 Key Learnings
 
-This activity demonstrated how critical Windows logging is for SOC operations and incident response. Authentication logs (**4624/4625**) are essential for detecting brute-force and RDP-based compromises, while user management events reveal persistence and privilege escalation attempts. 🛡️
+This activity demonstrated how critical Windows logging is for SOC operations and incident response. Authentication logs (**Event IDs 4624/4625**) are essential for detecting brute-force and RDP-based compromises, while user management events reveal persistence and privilege escalation attempts.
 
-**Sysmon** significantly enhances visibility into process execution, malware behavior, persistence mechanisms, and C2 communication. ⚙️📡
+**Sysmon** significantly enhances visibility into process execution, malware behavior, persistence mechanisms, and Command-and-Control (C2) communication.
 
-Finally, **PowerShell history** provides valuable insight into attacker commands that may not be visible in traditional process logs, helping analysts reconstruct post-compromise activity. 💻🔍
+Finally, **PowerShell history** provides valuable insight into attacker activity that may not be visible through traditional process logs, helping analysts reconstruct post-compromise actions.
 
 ---
 
 ## 📸 Screenshots
 
-Please refer to the attached screenshots in this directory.
+### Source IP of Brute-Force Attack
+
+![BruteIP](Sys_1.png)
+
+---
+
+### Compromised User Account
+
+![USer effected](Sys_2.png)
+
+---
+
+### Successful RDP Logon
+
+![RDP](Sys_3.png)
+
+---
+
+### Downloaded Malicious File
+
+![Mal File](Sys_8.png)
+
+---
+
+### Persistence Payload Download
+
+![download](Sys_9.png)
+
+---
+
+### Command-and-Control (C2) Connection
+
+![Connection IP&Port](Sys_10.png)
+
+---
+
+### First PowerShell Command Executed After Compromise
+
+![First command](Sys_12.png)
+
+---
+
+### Result
+
+![Result 1](Result1.png)
+
+![Result 2](Result2.png)
+
+![Result 3](Result3.png)
+
+![Result 4](Result4.png)
+
+---
+
+> QXV0aG9yOiBodHRwczovL2dpdGh1Yi5jb20vSEctNzU=

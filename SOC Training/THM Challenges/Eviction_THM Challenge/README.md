@@ -1,73 +1,114 @@
 # 🧠 MITRE ATT&CK Navigator – Threat Intelligence Analysis (APT28)
 
-## 🎯 Objective
-Sunny, an analyst at E-corp (a company specializing in rare earth metal production), received classified intelligence indicating that an advanced persistent threat group (APT28) may be targeting organizations similar to E-corp.
+## 📌 Overview
 
-To respond effectively, the objective was to use the MITRE ATT&CK Navigator to analyze the group’s tactics, techniques, and procedures (TTPs), identify potential intrusion activity, and ensure the organization is not already compromised.
-
----
-
-## 🕵️ APT28 Threat Analysis using ATT&CK Navigator
-
-### 📌 Approach
-I used the MITRE ATT&CK Navigator layer provided for APT28 to:
-
-- Analyze the group’s known TTPs  
-- Map attacker behavior to the MITRE ATT&CK framework  
-- Identify potential attack patterns relevant to E-corp  
-- Assess whether similar techniques could indicate intrusion in the environment  
-- Support proactive threat hunting and detection planning  
+In this lab, I used the MITRE ATT&CK Navigator to analyze the tactics, techniques, and procedures (TTPs) associated with the APT28 threat group. The objective was to assess how these techniques could be used against E-corp and to understand how threat intelligence supports proactive threat hunting, detection engineering, and incident response.
 
 ---
 
-## 🔍 Key Focus Areas
-During the analysis, I focused on the following ATT&CK tactics:
+## 🎯 Objectives
 
-- Initial Access  
-- Execution  
-- Persistence  
-- Privilege Escalation  
-- Defense Evasion  
-- Credential Access  
-- Discovery  
-- Lateral Movement  
-- Command and Control  
-
-This helped in understanding the full attack lifecycle used by APT28 and how it could potentially be applied against E-corp.
+- 🕵️ Analyze the tactics, techniques, and procedures (TTPs) used by APT28.
+- 🗺️ Map adversary behavior to the MITRE ATT&CK framework.
+- 🔍 Identify attack techniques that could indicate compromise within the environment.
+- 🛡️ Support proactive threat hunting and detection planning.
+- 📊 Improve understanding of intelligence-driven security operations.
 
 ---
 
-## 🛡️ Outcome
-The ATT&CK Navigator analysis provided clear visibility into APT28’s attack patterns. This allowed identification of relevant techniques that could be mapped to detection rules and used for proactive monitoring within the organization.
+## 🛠️ Tools Used
 
-The intelligence gathered can be used to:
+- 🧭 **MITRE ATT&CK Navigator**
+- 📚 **MITRE ATT&CK Framework**
 
-- Improve threat hunting capabilities  
-- Strengthen detection engineering  
-- Identify potential gaps in security coverage  
-- Prepare response strategies against APT28-like behavior  
+---
+
+## 📝 Investigation Process
+
+Using the MITRE ATT&CK Navigator layer provided for APT28, I:
+
+- Analyzed the threat group's known TTPs.
+- Mapped attacker behavior to the MITRE ATT&CK framework.
+- Identified attack techniques relevant to E-corp's environment.
+- Assessed whether observed techniques could indicate an existing compromise.
+- Evaluated opportunities to improve threat hunting and detection coverage.
+
+---
+
+## 🔍 ATT&CK Tactics Analyzed
+
+During the investigation, I analyzed techniques associated with the following ATT&CK tactics:
+
+- Initial Access
+- Execution
+- Persistence
+- Privilege Escalation
+- Defense Evasion
+- Credential Access
+- Discovery
+- Lateral Movement
+- Command and Control
+
+This provided a comprehensive understanding of APT28's attack lifecycle and how its techniques could be detected within an enterprise environment.
+
+---
+
+## 📚 Key Learnings
+
+- Improved understanding of intelligence-driven threat analysis.
+- Learned how to map adversary behavior using the MITRE ATT&CK framework.
+- Identified techniques that can support proactive threat hunting.
+- Gained experience using ATT&CK Navigator to visualize adversary TTPs.
+- Strengthened knowledge of detection engineering and ATT&CK-based investigations.
 
 ---
 
 ## 📸 Screenshots
-Refer to the screenshots for proof of ATT&CK Navigator analysis, technique mapping, and completion of the task.
+
+### Initial Access and Reconnaissance Techniques
+
+![Initial Access](ETC_1.png)
 
 ---
 
-## 🚀 Security Impact
-This exercise enhanced threat intelligence understanding by mapping real-world adversary behavior to the MITRE ATT&CK framework. It improved the ability to proactively detect and respond to APT activity based on known TTPs rather than reactive indicators.
+### Compromised Account Activity
+
+![Accounts](ETC_2.png)
 
 ---
 
-## 🛠️ Skills Gained
+### System Binary Proxy Execution
 
-- 🧭 MITRE ATT&CK Navigator usage  
-- 🕵️ Threat intelligence analysis  
-- 🧠 APT28 TTP understanding  
-- 📊 Attack pattern mapping  
-- 🛡️ Proactive threat hunting concepts  
+![proxy](ETC_6.png)
 
 ---
 
-## 📖 Conclusion
-This task strengthened my ability to analyze advanced threat groups using structured frameworks like MITRE ATT&CK. It reinforced the importance of understanding attacker behavior at the TTP level to improve detection, prevention, and incident response readiness.
+### Result
+
+![Result 1](Result1.png)
+
+![Result 1.1](Result1.1.png)
+
+![Result 2](Result2.png)
+
+---
+
+## 🚀 Skills Gained
+
+- MITRE ATT&CK Navigator
+- Threat Intelligence Analysis
+- APT28 TTP Analysis
+- ATT&CK Technique Mapping
+- Threat Hunting
+- Detection Engineering
+- Adversary Emulation Concepts
+
+---
+
+## ✅ Conclusion
+
+This lab strengthened my ability to analyze advanced threat groups using the MITRE ATT&CK framework. By mapping APT28's tactics and techniques to the ATT&CK knowledge base, I gained practical experience in applying threat intelligence to improve threat hunting, detection engineering, and incident response readiness.
+
+---
+
+> QXV0aG9yOiBodHRwczovL2dpdGh1Yi5jb20vSEctNzU=

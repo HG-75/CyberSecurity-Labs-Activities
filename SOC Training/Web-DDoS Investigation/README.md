@@ -2,7 +2,7 @@
 
 ## 👨‍💻 About This Project
 
-I worked on this project to understand and detect **Web DDoS (Distributed Denial of Service) attacks** using **Splunk** by analyzing real-time and historical logs.  
+I worked on this project to understand and detect **Web DDoS (Distributed Denial of Service) attacks** using **Splunk** by analyzing real-time and historical logs.
 
 My main focus was to learn how attackers exploit web systems and how defenders can identify and mitigate such attacks using security tools and best practices.
 
@@ -17,117 +17,146 @@ My main focus was to learn how attackers exploit web systems and how defenders c
 
 ---
 
-## 🎯 Objective
+## 🎯 Objectives
 
-The goal of this task was to:
-
-- Detect abnormal traffic patterns 🚨  
-- Identify possible DDoS behavior 💥  
-- Analyze logs using Splunk 📈  
-- Understand how attackers overwhelm web applications 🌍  
-- Learn defensive strategies used in real-world systems 🛡️  
+- Detect abnormal traffic patterns.
+- Identify indicators of a Web DDoS attack.
+- Analyze web server logs using Splunk.
+- Understand how attackers overwhelm web applications.
+- Explore defensive strategies used to mitigate DDoS attacks.
 
 ---
 
 ## ⚔️ What I Learned (Attack vs Defense)
 
-Attackers constantly search for weak points to exploit, but defenders use multiple layers of protection to keep systems stable.
+Attackers constantly search for weak points to exploit, while defenders rely on multiple layers of protection to maintain service availability.
 
 ### 🧱 Application-Level Defense
 
 #### 🔐 Secure Development Practices
-I learned that secure coding is the first line of defense.  
-Input validation plays a key role in preventing abuse of search fields and forms.
+
+- Learned how secure coding practices reduce attack surfaces.
+- Understood the importance of input validation in preventing abuse of application functionality.
 
 ---
 
-#### 🤖 Challenges (CAPTCHA & JS Checks)
-- CAPTCHA helps verify human users 👤  
-- JavaScript challenges help detect bots 🤖  
-- These methods slow down or block automated attacks
+#### 🤖 CAPTCHA & JavaScript Challenges
+
+- CAPTCHA helps distinguish legitimate users from automated bots.
+- JavaScript challenges identify suspicious automated traffic.
+- Both techniques help reduce automated attack traffic.
 
 ---
 
 ### 🌐 Network & Infrastructure Defense
 
-#### 🚀 Content Delivery Network (CDN)
-- CDNs distribute traffic across global edge servers 🌍  
-- Reduce load on origin servers  
-- Help absorb DDoS traffic spikes 📉  
-- Provide caching and load balancing
+#### 🚀 Content Delivery Networks (CDNs)
+
+- Distribute traffic across multiple edge servers.
+- Reduce load on origin servers.
+- Absorb high traffic volumes during DDoS attacks.
+- Improve availability through caching and load balancing.
 
 ---
 
-#### 🧯 Web Application Firewall (WAF)
-- Filters and monitors HTTP requests 🔥  
-- Blocks or challenges suspicious traffic  
-- Rate limiting helps prevent abuse (e.g., /login flooding)
+#### 🧯 Web Application Firewalls (WAFs)
+
+- Inspect incoming HTTP requests.
+- Block malicious requests before they reach the application.
+- Apply rate limiting to reduce abuse such as login flooding.
 
 ---
 
 ### 🌍 Large-Scale Mitigation
 
-Modern providers like Cloudflare and Google can absorb massive attacks using global infrastructure.
-
-- Billions of requests per second can be handled ⚡  
-- Traffic is distributed and filtered intelligently  
-- Attacks are mitigated before reaching origin servers 🛡️  
+Cloud providers such as Cloudflare and Google mitigate large-scale DDoS attacks by distributing and filtering malicious traffic before it reaches the protected infrastructure.
 
 ---
 
-### 🧨 Attack Bypass Techniques (What I Learned)
+### 🧨 Common DDoS Evasion Techniques
 
-Attackers may try to bypass defenses using:
-- Random query parameters (`/page?id=1234`) 🔀  
-- Changing user agents 🕵️  
-- Spoofing referrers 🔗  
-- Distributed geographic traffic 🌐  
+During the lab, I also learned how attackers attempt to bypass defensive controls by:
 
----
-
----
-
- ## 📸 Screenshots
-
-All relevant screenshots from Splunk dashboards, log analysis, and detected traffic patterns are included in the repository.
+- Using randomized query parameters
+- Rotating User-Agent strings
+- Spoofing HTTP referrers
+- Distributing traffic across multiple geographic locations
 
 ---
 
-## 📊 Splunk Role in This Project
+## 📸 Screenshots
 
-Using Splunk, I was able to:
+### Attacker IP Address
 
-- 📥 Ingest and analyze web server logs  
-- 📈 Identify traffic spikes and anomalies  
-- 🔍 Filter suspicious IP behavior  
-- 🚨 Detect patterns consistent with DDoS attempts  
-- 📊 Build insights from log data for better understanding  
+![IP](Web_1.png)
 
 ---
 
-## 🧠 Key Takeaways
+### Targeted Web Resource
 
-- DDoS attacks are about overwhelming resources, not breaking code 💥  
-- Defense requires multiple layers (App + Network + Infrastructure) 🛡️  
-- Splunk is powerful for real-time log analysis and detection 📊  
-- CDNs and WAFs are essential in modern web security 🌍  
+![Page](Web_2.png)
 
 ---
 
-## 🚀 Conclusion
+### HTTP Error Code Returned to Clients
 
-This project helped me understand how real-world DDoS detection works and how security tools like Splunk can be used to analyze and defend against such attacks.
-
-I now have a better understanding of both:
-- ⚔️ How attacks work  
-- 🛡️ How defenses are implemented in production systems  
+![Error](Web_3.png)
 
 ---
 
-## 📌 Status
+### Client IP Generating the Highest Request Volume
 
-✔️ Completed DDoS detection analysis using Splunk  
-✔️ Gained practical understanding of mitigation techniques  
-✔️ Improved log analysis and security awareness  
+![Client IP](Web_5.png)
 
 ---
+
+### Most Common User-Agent Used During the Attack
+
+![Botnet](Web_6.png)
+
+---
+
+### Legitimate Client Receiving HTTP 503 Responses
+
+![503](Web_8.png)
+
+---
+
+### Result
+
+![Result 1](Result1.png)
+
+![Result 2](Result2.png)
+
+![Result 2.1](Result2.1.png)
+
+---
+
+## 📊 Splunk Investigation
+
+Using Splunk, I:
+
+- 📥 Ingested and analyzed web server logs.
+- 📈 Identified traffic spikes associated with abnormal activity.
+- 🔍 Filtered requests originating from suspicious clients.
+- 🚨 Detected patterns consistent with Web DDoS attacks.
+- 📊 Correlated log data to better understand attacker behavior.
+
+---
+
+## 🧠 Key Learnings
+
+- DDoS attacks aim to exhaust application or infrastructure resources rather than exploit software vulnerabilities.
+- Effective mitigation requires multiple defensive layers across applications, networks, and infrastructure.
+- Splunk enables rapid identification of abnormal traffic patterns through log analysis and correlation.
+- CDNs and WAFs play a critical role in modern DDoS mitigation strategies.
+
+---
+
+## ✅ Conclusion
+
+This project strengthened my understanding of Web DDoS detection by combining log analysis with defensive concepts. Using Splunk, I investigated abnormal traffic patterns, identified attacker behavior, and explored how layered defenses such as CDNs and WAFs help organizations maintain service availability during denial-of-service attacks.
+
+---
+
+> QXV0aG9yOiBodHRwczovL2dpdGh1Yi5jb20vSEctNzU=

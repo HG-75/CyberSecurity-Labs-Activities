@@ -1,97 +1,127 @@
-# 🛡️ Reporting Guide
+# 🛡️ SOC Alert Reporting Guide
 
-## 📌 Overview
+## 📖 Overview
 
-This repository documents my hands-on practice with **SOC Level 1 (L1) Alert Reporting** using the TryHackMe platform.
-
-The goal of this lab was to understand how security analysts create structured reports for alerts instead of simply marking them as true/false positives.
-
-A strong report helps:
-
-* L2 analysts quickly understand incidents
-* Preserve investigation context for long-term records
-* Improve analytical and communication skills
+In this lab, I practiced documenting security alerts using the reporting workflow followed by SOC Level 1 (L1) Analysts. The exercise focused on creating structured, evidence-based incident reports that clearly communicate investigation findings and support efficient incident handling by higher-tier analysts.
 
 ---
 
-## 🧠 Key Concept: The Five Ws
+## 🎯 Objectives
 
-To write an effective SOC report, I used the **Five Ws framework**:
-
-* **Who** → User involved in the activity
-* **What** → Action performed (e.g., phishing click, file download)
-* **When** → Timeline of the activity
-* **Where** → Device, IP, or domain involved
-* **Why** → Final reasoning and verdict (most important)
+- Understand the importance of structured SOC alert reporting.
+- Apply the Five Ws methodology to document security incidents.
+- Investigate phishing-related alerts.
+- Produce clear, evidence-based analyst reports.
+- Improve technical communication and documentation skills.
 
 ---
 
-## 🧪 Lab Tasks & Findings
+## 🛠️ Tools Used
 
-### ✅ Task 1: Identify Data Leak Source
-
-* **Leaked Email:**
-  `m.boslan@tryhackme.thm`
+- 🛡️ TryHackMe SOC Simulator
+- 📝 Alert Reporting Interface
 
 ---
 
-### ✅ Task 2: Identify Phishing Email Sender
+## 🔬 Investigation Summary
 
-* **Suspicious Sender:**
-  `support@microsoft.com`
+### 📖 1. Understanding the Five Ws
+
+Applied the Five Ws framework to structure investigation reports by documenting:
+
+- **Who** – User involved in the activity
+- **What** – Suspicious activity observed
+- **When** – Timeline of events
+- **Where** – Host, IP address, or domain involved
+- **Why** – Investigation findings and final analyst verdict
 
 ---
 
-### ✅ Task 3: Write SOC Report & Capture Flag
+### 📧 2. Phishing Investigation
 
-After analyzing the phishing alert and writing a structured report using the Five Ws:
+Investigated phishing-related alerts to identify:
 
-* **Flag Obtained:**
-  `THM{nice_attempt_faking_microsoft_support}`
+- Suspicious sender information
+- Indicators of compromise (IOCs)
+- Evidence supporting the investigation
+- Overall legitimacy of the alert
+
+---
+
+### 📝 3. Security Report Creation
+
+Documented investigation findings by:
+
+- Recording relevant evidence
+- Explaining the investigation process
+- Supporting conclusions with observations
+- Producing a structured analyst report
+
+---
+
+### ✅ 4. Investigation Validation
+
+Validated the completed report by:
+
+- Confirming investigation accuracy
+- Reviewing supporting evidence
+- Completing the reporting exercise
+- Successfully resolving the simulated alert
+
+---
+
+## 🚨 Findings
+
+The exercise demonstrated how structured reporting improves communication within a Security Operations Center.
+
+Key observations included:
+
+- 📧 Phishing indicators were successfully identified and documented.
+- 📝 Structured reporting preserved the complete investigation context.
+- 🔍 Evidence-based documentation supported the analyst's conclusions.
+- 🤝 Clear reports enable faster review and escalation by higher-tier analysts.
 
 ---
 
 ## 📸 Screenshots
 
-All steps of my investigation and reporting process are documented with screenshots in this repository.
+All steps of the investigation and reporting process are documented with screenshots in this repository.
 
-* SOC dashboard analysis
-* Alert investigation
-* Report writing process
-* Final flag confirmation
+- SOC dashboard analysis
+- Alert investigation
+- Report writing process
+- Final flag confirmation
+
 ---
 
 ### Result
+
 ![result](Result.png)
 
 ---
 
-## 🚀 Skills Demonstrated
+## 📚 Key Learnings
 
-* SOC alert analysis
-* Phishing investigation
-* Security event reporting
-* Analytical thinking
-* Clear technical communication
-
----
-
-## 💡 Key Takeaway
-
-Writing a good report is just as important as detecting the threat.
-If you can clearly explain an incident, it proves you truly understand it.
+- Effective incident reporting is a critical responsibility of SOC analysts.
+- Well-structured reports improve collaboration between L1 and L2 analysts.
+- The Five Ws framework helps ensure investigations are complete and easy to understand.
+- Evidence-based reporting provides clear justification for investigation outcomes.
+- Strong technical communication is as important as identifying malicious activity during incident response.
 
 ---
 
-## 📂 Platform
+## 📚 Skills Gained
 
-* **Lab:** TryHackMe – SOC L1 Alert Reporting
-* **Focus Area:** Security Operations Center (SOC)
+- 🛡️ SOC Alert Reporting
+- 📧 Phishing Investigation
+- 📝 Incident Documentation
+- 🔍 Evidence Collection
+- 📊 Security Analysis
+- 📄 Technical Communication
+- ⚖️ Threat Validation
+- 🧠 Analytical Thinking
+- 🚨 SOC Operations
 
 ---
 
-## 🤝 Connect
-
-If you're also learning cybersecurity or SOC analysis, feel free to connect and collaborate!
-
----
+> QXV0aG9yOiBodHRwczovL2dpdGh1Yi5jb20vSEctNzU=

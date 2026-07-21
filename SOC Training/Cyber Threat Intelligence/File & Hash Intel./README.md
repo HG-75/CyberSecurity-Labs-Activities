@@ -1,114 +1,205 @@
 # 📂 File & Hash Intelligence
 
+## 📝 Overview
+
+In this lab, I investigated suspicious files using hash-based threat intelligence and sandbox analysis. The investigation focused on identifying malicious samples, enriching them with threat intelligence from multiple platforms, extracting behavioral indicators, and mapping observed techniques to the MITRE ATT&CK framework.
+
+---
+
 ## 🎯 Objectives
 
-- 🔍 Interpret suspicious file paths and filenames using heuristic indicators to identify attacker tradecraft.
-
-- 🔐 Generate and validate file hashes as immutable identifiers for malicious binaries regardless of filename changes.
-
-- 🌐 Leverage VirusTotal and MalwareBazaar to enrich observed samples with detection scores, threat labels, and campaign attribution.
-
-- 🧪 Extract behavioral IOCs from sandbox analysis and map observed techniques to MITRE ATT&CK.
-
-- 🛡️ Investigate a real triage package of flagged binaries within a simulated SOC scenario.
+- 🔍 Identify suspicious files using heuristic indicators
+- 🔐 Generate and validate cryptographic hashes
+- 🌐 Enrich samples using VirusTotal and MalwareBazaar
+- 🧪 Analyze malware behavior through sandbox reports
+- 🛡️ Map observed techniques to the MITRE ATT&CK framework
 
 ---
 
-## 🛠️ Tools & Resources
+## 🛠️ Tools Used
 
-### 🌐 VirusTotal
-For hash-based lookups, vendor detection scores, threat labels, file properties, and network infrastructure associated with malicious samples.
-
-### 🦠 MalwareBazaar
-For malware family tagging, YARA rule identification, campaign attribution, and cross-referencing samples against a community-maintained database.
-
-### 🔬 Hybrid Analysis
-For sandbox-based behavioral analysis, ATT&CK technique mapping, process trees, and runtime IOC extraction.
-
-### 💻 TryDetectThis
-Offline threat intel platform used throughout this investigation to query vendor data and sandbox reports.
+- 🦠 VirusTotal
+- 🗂️ MalwareBazaar
+- 🔬 Hybrid Analysis
+- 💻 TryDetectThis
 
 ---
 
-## 📝 Steps Performed
+## 🔬 Investigation Summary
 
-- 🔎 Examined files in the CTI package for heuristic indicators including double extensions, system binary impersonation, high-entropy names, and masquerading patterns.
+### 📂 1. File Inspection
 
-- 🔑 Generated SHA256 hashes for samples under investigation and validated them against threat intelligence platforms.
+Examined suspicious files to identify:
 
-- 🌍 Submitted hashes to VirusTotal and reviewed detection scores, threat classification labels, first submission timestamps, signing status, and associated network infrastructure.
-
-- 🏷️ Identified the vendor that classified Morse-Code-Analyzer as non-malicious and noted the MITRE technique flagged for persistence and privilege escalation.
-
-- 🧬 Analyzed bl0gger.exe on Hybrid Analysis to retrieve associated tags, the stealth command line executed, and the spawned child process from the process tree.
-
-- 📄 Investigated payroll.pdf.exe to determine the legitimate Windows binary it was masquerading as, the associated URL, and the number of extracted strings from sandbox analysis.
-
-- ⚡ Analyzed Challenge.bin.sample to retrieve its SHA256 hash, VirusTotal family labels, first seen timestamp, the text file dropped during execution, the PowerShell command observed, and its mapped MITRE ATT&CK technique ID.
+- Double extensions
+- High-entropy filenames
+- Masquerading techniques
+- Suspicious file paths
 
 ---
 
-## 📚 Key Learnings
+### 🔐 2. Hash Analysis
 
-File and hash intelligence transforms a raw alert into actionable context. Heuristic filepath and filename analysis provides the first signal, while hash lookups across VirusTotal and MalwareBazaar confirm identity and attribution. Sandbox analysis fills the gap that static analysis leaves open, revealing runtime behavior, dropped payloads, and ATT&CK-mapped techniques. Together these three layers form the core enrichment workflow every SOC analyst applies during triage.
+Generated SHA256 hashes for the collected samples and validated them against multiple threat intelligence platforms.
 
 ---
 
-## 📸 Screenshots
+### 🌐 3. Threat Intelligence Investigation
 
-### Bl0gger.exe
+Investigated the samples using:
+
+- VirusTotal detection results
+- MalwareBazaar family classification
+- Threat labels
+- First-seen timestamps
+- Associated infrastructure
+
+---
+
+### 🔬 4. Sandbox Analysis
+
+Reviewed Hybrid Analysis reports to identify:
+
+- Process execution
+- Child processes
+- Behavioral indicators
+- Command-line activity
+- Runtime artifacts
+
+---
+
+### 🛡️ 5. ATT&CK Mapping
+
+Mapped observed malware behavior to MITRE ATT&CK techniques and reviewed persistence and privilege escalation methods identified during analysis.
+
+---
+
+## 🚨 Findings
+
+The investigation demonstrated how multiple threat intelligence sources can be combined to build context around suspicious files.
+
+Evidence collected during the investigation revealed:
+
+- 🔐 Unique SHA256 hashes identifying malicious samples
+- 🦠 Malware family classifications and threat labels
+- 🌐 Detection results from multiple security vendors
+- 🔬 Sandbox-derived behavioral indicators
+- 🧩 ATT&CK techniques associated with the observed malware
+- ⚙️ Suspicious command-line execution and spawned child processes
+
+---
+
+# 📸 Refer to Screenshots for Reference
+
+### Bl0gger.exe Analysis
+
 ![hash](intel_2.png)
+
 ---
-### Tags to Identify Bl0gger.exe
+
+### Tags Identifying Bl0gger.exe
+
 ![tags](intel_9.png)
 
-### TCL (threat classfication label)
+---
+
+### Threat Classification Label (TCL)
+
 ![TCL](intel_3.png)
+
 ---
 
-### MITRE Technique For Morse-Code-Analyzer
+### MITRE ATT&CK Technique for Morse-Code-Analyzer
+
 ![MITRE tech](intel_8.png)
+
 ---
 
-### Stealth Command Line Execution from file
+### Stealth Command-Line Execution
+
 ![SCL](intel_10.png)
+
 ---
 
-### New process
+### Spawned Child Process
+
 ![New process](intel_11.png)
+
 ---
 
-### Malware Masquerading a Window File
+### Malware Masquerading as a Windows System File
+
 ![name of file](intel_12.png)
+
 ---
 
-###  SHA256 of All tha malicious Files
+### SHA256 Hashes of Malicious Samples
+
 ![SHA256](intel_15.png)
+
 ---
 
-### Payload.exe File
+### Payload.exe Analysis
+
 ![file](intel_1.png)
+
 ---
 
-### Label of the file payload
+### Threat Label for Payload.exe
+
 ![label](intel_16.png)
+
 ---
 
-### Execution of Malicious File
+### Malicious File Execution
+
 ![execution](intel_18.png)
+
 ---
 
-### Command Used
+### Suspicious Command Execution
+
 ![cmd](intel_19.png)
+
 ---
 
-### MITRE ATT&Ck ID Associated
+### Associated MITRE ATT&CK Technique
+
 ![ID](intel_20.png)
+
 ---
 
 ### Result
+
 ![Result 1](Result1.png)
 
 ![Result 2](Result2.png)
 
 ![Result 3](Result3.png)
+
+---
+
+## 📚 Key Learnings
+
+- Hash intelligence enables analysts to quickly identify known malicious files.
+- Threat intelligence platforms enrich investigations with reputation, malware family, and campaign information.
+- Sandbox analysis provides valuable insight into runtime behavior that static analysis cannot reveal.
+- Mapping malware behavior to MITRE ATT&CK improves understanding of attacker techniques.
+- Combining static analysis, threat intelligence, and behavioral analysis provides a comprehensive malware triage workflow.
+
+---
+
+## 📚 Skills Gained
+
+- 🔐 File Hash Analysis
+- 🦠 VirusTotal Investigation
+- 🗂️ MalwareBazaar Intelligence
+- 🔬 Hybrid Analysis
+- 🕵️ Malware Triage
+- 🧩 MITRE ATT&CK Mapping
+- 📊 Threat Intelligence Analysis
+- 🚨 SOC Investigation Workflow
+
+---
+
+> QXV0aG9yOiBodHRwczovL2dpdGh1Yi5jb20vSEctNzU=

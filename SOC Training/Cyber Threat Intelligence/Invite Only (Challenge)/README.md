@@ -1,63 +1,122 @@
 # 🕵️‍♂️ Invite Only — Threat Intelligence Challenge
 
+## 📖 Overview
+
+In this lab, I conducted a threat intelligence investigation by pivoting across multiple indicators of compromise (IOCs) to reconstruct a malware campaign. Starting with a flagged SHA256 hash, I traced execution lineage, analyzed dropped files, enriched indicators using threat intelligence platforms, and correlated findings with an original threat report to understand the complete attack chain.
+
+---
+
 ## 🎯 Objectives
 
-- 🔍 Analyze a flagged SHA256 hash to identify the file, its type, and execution lineage.
-
-- 🔗 Trace dropped files across multiple hash pivots to map the full malware delivery chain.
-
-- 🌐 Enrich a flagged IP to identify linked files and determine the connecting malware family.
-
-- 📑 Correlate all indicators against an original threat intelligence report to confirm attribution.
-
-- 🍪 Identify the phishing technique, cookie-stealing tool, and redirection platform used in the attack.
+- Identify the file associated with a flagged SHA256 hash.
+- Trace execution parent relationships to reconstruct malware execution.
+- Investigate dropped files through hash pivoting.
+- Enrich malicious IP addresses and related malware samples.
+- Correlate indicators with public threat intelligence reports.
+- Identify phishing techniques, credential theft tools, and attacker infrastructure.
 
 ---
 
-## 🛠️ Tools & Resources
+## 🛠️ Tools Used
 
-- 🧠 **TryDetectThis 2.0:** Primary platform for hash and IP enrichment, execution parent tracing, and dropped file identification.
-
-- 🦠 **VirusTotal:** For cross-referencing hash detections, malware family labels, and indicator relationships.
-
-- 🌍 **Google / Open-Source Reports:** For locating the original threat intelligence report linked to the flagged indicators.
+- 🧠 TryDetectThis 2.0
+- 🦠 VirusTotal
+- 🌐 Open-Source Intelligence (OSINT)
 
 ---
 
-## 🚀 Steps Performed
+## 🔬 Investigation Summary
 
-1. 📥 Submitted the flagged SHA256 hash to TryDetectThis 2.0 to identify the filename and associated file type.
+### 🔎 1. Hash Investigation
 
-2. 🧬 Traced the execution parent chain of the flagged hash, recording each parent file name and hash value chronologically.
+Analyzed the provided SHA256 hash to identify:
 
-3. 📦 Identified the file dropped by the flagged hash and noted its hash for further pivoting.
-
-4. 🔎 Researched the second execution parent hash to enumerate its four malicious dropped files in order of appearance.
-
-5. 🌐 Enriched the flagged IP to identify files associated with it and determined the malware family linking them.
-
-6. 📚 Used open-source search to locate the original threat intelligence report referencing all flagged indicators.
-
-7. 🍪 Extracted from the report the cookie-stealing tool targeting Google Chrome, the phishing technique employed, and the platform used to redirect victims to malicious infrastructure.
+- File name
+- File type
+- Associated malware sample
+- Initial threat context
 
 ---
 
-## 📚 Key Learnings
+### 🌳 2. Execution Lineage Analysis
 
-Threat intelligence investigations rarely stop at a single indicator. Each hash pivot reveals new dropped files, each dropped file links back to a malware family, and each malware family connects to a documented campaign. Following the full chain, from initial hash through execution parents, dropped payloads, and IP attribution, is what separates a closed alert from actionable intelligence. Cross-referencing findings against original threat reports provides the campaign context that enrichment tools alone cannot surface.
+Traced the malware execution chain by identifying:
+
+- Parent processes
+- Parent file hashes
+- Execution relationships
+- Malware delivery sequence
+
+---
+
+### 📦 3. Dropped File Investigation
+
+Pivoted through execution artifacts to identify:
+
+- Files dropped during execution
+- Additional malicious payloads
+- Related malware components
+
+---
+
+### 🌐 4. Infrastructure Enrichment
+
+Investigated attacker infrastructure by:
+
+- Enriching the flagged IP address
+- Identifying associated malware samples
+- Determining the linked malware family
+
+---
+
+### 📚 5. Threat Intelligence Correlation
+
+Correlated recovered indicators with publicly available threat intelligence reports to identify:
+
+- Campaign attribution
+- Attacker techniques
+- Malware behavior
+- Infrastructure relationships
+
+---
+
+### 🍪 6. Campaign Analysis
+
+Identified key elements of the attack including:
+
+- Cookie-stealing malware
+- Phishing technique
+- Victim redirection platform
+- Credential theft methodology
+
+---
+
+## 🚨 Findings
+
+The investigation successfully reconstructed the malware campaign by correlating hashes, execution lineage, dropped files, infrastructure, and public threat intelligence.
+
+Evidence collected during the investigation revealed:
+
+- 🔍 Malware execution lineage through parent-child relationships
+- 📦 Multiple dropped payloads used throughout the attack
+- 🌐 Infrastructure associated with the malware campaign
+- 🦠 Malware family attribution through threat intelligence enrichment
+- 🍪 Cookie-stealing functionality targeting browser sessions
+- 🎣 Phishing infrastructure used for credential theft
 
 ---
 
 ## 📸 Screenshots
 
 ### File Name, Type, Execution Parent, Dropped File
+
 #### Name
 ![name](Chal_1.png)
 
 #### Type
 ![type](Chal_2.png)
 
-#### Execution Parent 
+#### Execution Parent
 ![Parent](Chal_3.png)
 
 #### Dropped File
@@ -66,26 +125,65 @@ Threat intelligence investigations rarely stop at a single indicator. Each hash 
 ---
 
 ### Malicious Dropped Files
+
 ![mal files](Chal_5.png)
+
 ---
 
 ### Files Related to Flagged IP
+
 ![Flagged Ip files](Chal_6.png)
+
 ---
 
 ### Tool Used to Steal Cookies
+
 ![cookies](Chal_8.png)
+
 ---
 
 ### Phishing Technique Used by Attacker
+
 ![Phishing](Chal_9.png)
+
 ---
 
 ### Platform Used
+
 ![platform](Chal_10.png)
+
 ---
 
-###  Result
+### Result
+
 ![Result 1](Result1.png)
 
 ![Result 2](Result2.png)
+
+---
+
+## 📚 Key Learnings
+
+- Threat intelligence investigations rely on pivoting across hashes, IP addresses, and related artifacts to reconstruct attacker activity.
+- Execution lineage analysis helps reveal malware delivery chains and relationships between malicious files.
+- Threat intelligence platforms provide valuable context for malware attribution and infrastructure analysis.
+- Correlating technical indicators with public intelligence reports improves understanding of attacker campaigns and techniques.
+- Combining multiple intelligence sources enables more accurate and comprehensive incident investigations.
+
+---
+
+## 📚 Skills Gained
+
+- 🧠 Threat Intelligence Analysis
+- 🔎 IOC Enrichment
+- 🌐 IP & Infrastructure Investigation
+- 🔗 Hash Pivoting
+- 📦 Malware Lineage Analysis
+- 🦠 VirusTotal Investigation
+- 📖 Open-Source Intelligence (OSINT)
+- 🎣 Phishing Campaign Analysis
+- 🍪 Malware & Credential Theft Investigation
+
+---
+
+> QXV0aG9yOiBodHRwczovL2dpdGh1Yi5jb20vSEctNzU=

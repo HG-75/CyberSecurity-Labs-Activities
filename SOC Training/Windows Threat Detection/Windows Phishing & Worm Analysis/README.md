@@ -54,23 +54,23 @@ Analyzed key Event IDs to detect:
 * Applied **Logon Type filters** to isolate remote authentication attempts originating from external IP addresses.
 * Identified:
 
-  * 🎯 Most frequently targeted account
-  * 🌐 Attacker's source IP address
+  * 🎯 Most frequently targeted account.
+  * 🌐 Attacker's source IP address.
 
 ### 2️⃣ Successful Compromise Verification
 
 * Switched filters to **Successful Logon Events**.
 * Confirmed:
 
-  * 👤 Compromised account
-  * 🔑 Logon type used for Initial Access
+  * 👤 Compromised account.
+  * 🔑 Logon type used for Initial Access.
 * Extracted the **Logon ID** from the successful RDP session.
 * Correlated the Logon ID with Sysmon logs to enumerate attacker activity after access was obtained.
 
 ### 3️⃣ Threat Actor Attribution
 
 * Examined workstation-related fields within the authentication logs.
-* Retrieved the threat actor's machine hostname for additional context.
+* Retrieved the threat actor's source workstation name for additional context.
 
 ### 4️⃣ Phishing Analysis
 
@@ -78,9 +78,9 @@ Analyzed key Event IDs to detect:
 * Investigated malicious **LNK shortcut files** and extracted embedded PowerShell download commands.
 * Reviewed phishing artifacts to identify:
 
-  * 📄 Double-extension files
-  * 🎭 Social engineering techniques
-  * 🪤 Windows hidden-extension abuse
+  * 📄 Double-extension executables.
+  * 🎭 Social engineering techniques.
+  * 🪤 Windows hidden-extension abuse.
 
 ### 5️⃣ Sysmon Execution Chain Analysis
 
@@ -98,7 +98,7 @@ Network Connection
 
 * Identified the Process ID (PID) of the phishing malware.
 * Traced outbound network connections.
-* Determined the malicious domain contacted by the malware.
+* Determined the malicious Command-and-Control (C2) domain contacted by the malware.
 
 ### 6️⃣ USB Worm Investigation
 
@@ -111,26 +111,74 @@ Network Connection
 
 ## 📚 Key Learnings
 
-Initial Access is rarely a single event—it's an entire attack chain, and every stage leaves behind valuable forensic evidence.
+Initial Access is rarely a single event—it is an entire attack chain, and each stage leaves behind valuable forensic evidence.
 
 Whether it's:
 
-* 🚨 Hundreds of failed RDP logon attempts
-* 🔗 A malicious PowerShell command hidden inside an LNK shortcut
-* 💾 Malware executed from a USB drive
-* 🌐 Suspicious outbound network connections
+* 🚨 Hundreds of failed RDP logon attempts.
+* 🔗 A malicious PowerShell command embedded within an LNK shortcut.
+* 💾 Malware executed from a removable USB drive.
+* 🌐 Suspicious outbound network connections.
 
-Windows Event Logs and Sysmon provide the telemetry needed to uncover the attack.
+Windows Security Event Logs and Sysmon provide the telemetry needed to reconstruct these attacks.
 
 The key takeaway is understanding:
 
-* 🔍 Which Event IDs matter
-* 🔗 How to correlate events across multiple log sources
-* 🧠 How attackers abuse user trust and default Windows behaviors
-* 🛡️ How defenders can detect and investigate Initial Access techniques effectively
+* 🔍 Which Event IDs provide the most valuable evidence.
+* 🔗 How to correlate events across multiple log sources.
+* 🧠 How attackers abuse user trust and default Windows behaviors.
+* 🛡️ How defenders can detect and investigate Initial Access techniques effectively.
 
 ---
 
 ## 📸 Screenshots
 
-> 📂 Please refer to the screenshots attached in this directory for supporting evidence and analysis results.
+### Most Targeted User Account During Brute-Force Attack
+
+![Botnet](Phis_2.png)
+
+---
+
+### Source IP of Successful RDP Compromise
+
+![RDP](Phis_3.png)
+
+---
+
+### Threat Actor's Source Workstation
+
+![Actor](Phis_4.png)
+
+---
+
+### Malicious LNK File
+
+![LNK](Phis_6.png)
+
+---
+
+### Double-Extension Executable
+
+![Double Extention](Phis_7.png)
+
+---
+
+### Command-and-Control (C2) Domain
+
+![C2](Phis_11.png)
+
+---
+
+### Result
+
+![Result 1](Result1.png)
+
+![Result 2](Result2.png)
+
+![Result 3](Result3.png)
+
+![Result 4](Result4.png)
+
+---
+
+> QXV0aG9yOiBodHRwczovL2dpdGh1Yi5jb20vSEctNzU=

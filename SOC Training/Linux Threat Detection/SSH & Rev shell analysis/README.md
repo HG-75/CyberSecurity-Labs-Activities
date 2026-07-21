@@ -2,74 +2,161 @@
 
 ## 🎯 Objectives
 
-- 🔎 Detect SSH brute-force attempts and successful breaches via authentication logs.
-- 🌐 Analyze web server logs to identify command injection exploitation against a vulnerable web application.
-- 🌳 Build process trees using `auditd` to trace the origin of suspicious commands back to the breaching service.
-- 🧠 Investigate advanced Initial Access scenarios including supply chain compromise and human-driven attacks.
-- 🔁 Apply process tree analysis as a universal detection method across all Initial Access techniques.
+- 🔎 Detect SSH brute-force attempts and successful authentication events using Linux authentication logs.
+- 🌐 Analyze web server logs to identify command injection against a vulnerable Python web application.
+- 🌳 Reconstruct process trees using `auditd` to trace suspicious processes back to their parent services.
+- 🧠 Investigate attacker activity from initial access through reverse shell execution.
+- 🔁 Demonstrate how process tree analysis supports incident investigation across different Initial Access techniques.
 
 ---
 
 ## 🛠️ Tools & Resources
 
-- 📄 **auth.log** → Detect SSH brute-force attempts, successful logins, and attacker IPs.
-- 🌍 **Nginx Access Log** → Identify command injection patterns in HTTP requests.
-- 🧩 **auditd** → Runtime process monitoring to build process trees using PID & PPID correlation.
+- 📄 **auth.log** – Investigated SSH authentication attempts, successful logins, and attacker IP addresses.
+- 🌍 **Nginx Access Log** – Identified malicious HTTP requests and command injection attempts.
+- 🧩 **auditd** – Reconstructed process trees using PID and PPID relationships to trace attacker activity.
 
 ---
 
-## 🧪 Steps Performed
+## 🧪 Investigation Summary
 
 ### 🔐 1. SSH Authentication Analysis
-- Reviewed `auth.log` to determine the first SSH login of the `ubuntu` user.
-- Confirmed authentication method used during access.
 
-### 🚨 2. Brute-force Detection
-- Filtered failed SSH login attempts.
-- Identified:
-  - ⏱️ Brute-force start time
-  - 👤 Targeted usernames
-  - 🌐 IP address that successfully accessed root
-
-### 🌐 3. Web Exploitation Analysis
-- Analyzed Nginx access logs.
-- Detected:
-  - Attacker IP
-  - Vulnerable endpoint
-  - 💉 Command injection payloads inside request parameters
-
-### 📂 4. File Access via Injection
-- Identified Python file accessed through injection.
-- Extracted hidden flag from the file.
-
-### 🧩 5. Process Tree Reconstruction (auditd)
-- Traced `whoami` execution back to origin using PPID chain.
-
-### 🕵️ 6. Full Attack Chain Analysis
-- Enumerated child processes of compromised application.
-- Identified reverse shell execution and attacker activity.
+- Reviewed `auth.log` to identify the first successful SSH login for the `ubuntu` user.
+- Determined the authentication method used during the login.
 
 ---
 
-## 🌳 Process Tree
+### 🚨 2. SSH Brute-Force Investigation
+
+- Analyzed failed SSH authentication attempts.
+- Identified:
+  - ⏱️ Time the brute-force attack began
+  - 👤 User accounts targeted
+  - 🌐 IP address that successfully compromised the `root` account
+
+---
+
+### 🌐 3. Web Exploitation Investigation
+
+- Examined Nginx access logs.
+- Identified:
+  - Attacker IP address
+  - Vulnerable web endpoint
+  - 💉 Command injection payload embedded within HTTP requests
+
+---
+
+### 📂 4. Vulnerable Application Investigation
+
+- Identified the vulnerable Python application targeted by the attacker.
+- Retrieved the flag stored within the vulnerable file.
+
+---
+
+### 🧩 5. Process Tree Reconstruction
+
+- Used `auditd` process logs to trace execution of the `whoami` command back to its originating process using PPID relationships.
+
+---
+
+### 🕵️ 6. Reverse Shell Investigation
+
+- Reconstructed the complete attack chain.
+- Identified child processes spawned by the compromised web application.
+- Determined the program responsible for establishing the reverse shell.
+
+---
+
+## 🌳 Example Process Tree
+
+```text
 1 (systemd)
-└── 577 (Python script)
-└── 1018 (Reverse shell established)
-└── 1020 (First command by attacker)
+└── 577 (Python web application)
+    └── 1018 (Reverse shell)
+        └── 1020 (Attacker command execution)
+```
 
 ---
 
 ## 📚 Key Learnings
 
-- ⚡ Linux Initial Access varies, but detection methodology remains consistent.
-- 🧭 Process tree analysis connects malicious actions back to the original entry point.
-- 📊 Application logs help narrow scope, but `auditd` provides deep runtime visibility.
-- 🧠 Combining logs = full attack reconstruction with high accuracy.
+- Linux initial access can occur through multiple techniques, but investigation methodology remains consistent.
+- Process tree reconstruction is an effective technique for tracing malicious activity back to the initial compromise.
+- Application logs identify exploitation attempts, while `auditd` provides detailed visibility into process execution.
+- Correlating authentication logs, web server logs, and process telemetry enables accurate reconstruction of attacker activity.
 
 ---
 
-## 🖼️ Screenshots
+## 📸 Screenshots
 
-📁 Please refer to the attached screenshots in this directory.
+### Successful SSH Login by the Ubuntu User
+
+![SSHuSer](SRS_1.png)
 
 ---
+
+### SSH Password Brute-Force Activity
+
+![bruteforce](SRS_2.png)
+
+---
+
+### Multiple Failed SSH Login Attempts Against User Accounts
+
+![botnet](SRS_3.png)
+
+---
+
+### Successful Root Account Compromise from a Suspicious IP Address
+
+![compromise](SRS_4.png)
+
+---
+
+### Vulnerable Python Application
+
+![python](SRS_6.png)
+
+---
+
+### Process Tree Reconstruction Using PPID Relationships
+
+![command1](SRS_7.png)
+
+![command2](SRS_8.png)
+
+---
+
+### Reverse Shell Executed via Python
+
+![python3](SRS_9.png)
+
+---
+
+### Result
+
+![Result 1](Result1.png)
+
+![Result 2](Result2.png)
+
+![Result 3](Result3.png)
+
+![Result 4](Result4.png)
+
+---
+
+## 📚 Skills Gained
+
+- 🔐 Linux Authentication Log Analysis
+- 🌐 Web Server Log Analysis
+- 💉 Command Injection Investigation
+- 🌳 Process Tree Analysis
+- 🧩 Linux Process Monitoring (`auditd`)
+- 🛡️ Reverse Shell Detection
+- 🚨 Incident Investigation
+- 📊 Threat Hunting
+
+---
+
+> QXV0aG9yOiBodHRwczovL2dpdGh1Yi5jb20vSEctNzU=

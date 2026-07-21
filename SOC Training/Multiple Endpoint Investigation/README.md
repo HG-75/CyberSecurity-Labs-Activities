@@ -1,107 +1,186 @@
-# 🔥 Multiple Endpoints Compromise
+# 🔥 Multiple Endpoints Compromise Investigation
 
 ## 🎯 Objectives
 
-- 🖥️ Investigate the initial compromise of the CEO's workstation via a malicious ISO attachment.
-- 🔍 Trace the stage 1 payload execution chain through file implantation, persistence, and C2 establishment.
-- 🔐 Identify the UAC bypass technique and credential dumping tool used to escalate privileges.
-- 🌐 Analyse lateral movement activity across multiple machines using harvested credentials and remote file shares.
-- 💥 Uncover the final stage of the attack including domain controller compromise, DCSync, and ransomware deployment.
+- 🖥️ Investigate the initial compromise of the CEO's workstation through a malicious ISO attachment.
+- 🔍 Trace the Stage 1 payload execution chain, including file implantation, persistence, and command-and-control (C2) communication.
+- 🔐 Identify the User Account Control (UAC) bypass technique and credential dumping tool used for privilege escalation.
+- 🌐 Analyze lateral movement across multiple hosts using harvested credentials and remote file shares.
+- 💥 Investigate the final stage of the attack involving domain controller compromise, DCSync, and ransomware deployment.
 
 ---
 
 ## 🛠️ Tools & Resources
 
-- 📊 **Elastic Stack (SIEM):** Primary investigation platform for querying and correlating endpoint logs across all stages of the attack.
+- 📊 **Elastic Stack (SIEM)** — Used to query, correlate, and investigate endpoint telemetry across all stages of the attack.
 
 ---
 
-## 📋 Steps Performed
+## 🔍 Investigation Summary
 
-Investigated the attack campaign targeting the CEO of Quick Logistics LLC (simulated) via a phishing email with an ISO payload, covering:
+This investigation followed a multi-stage intrusion targeting the CEO of **Quick Logistics LLC** (simulated), beginning with a phishing email containing a malicious ISO attachment.
 
-- 📌 Stage 1 payload execution, identifying the initiating PID, the full command line used to implant a file to a secondary location, and the subsequent execution of the implanted file.
-- ⏰ Scheduled task created by the malicious script for persistence, and the C2 IP and port established by the implanted file.
-- 🛡️ UAC bypass process identified following confirmation of local administrator access, and the GitHub link used to download a credential dumping tool.
-- 🔑 Username and hash of the credentials dumped from the first machine, and the remote file accessed by the attacker during share enumeration.
-- 🌍 New credentials discovered from the remote file contents, the target hostname for lateral movement, and the parent process of the malicious command executed on the second compromised machine.
-- 🏢 Credentials dumped from the second machine, the additional account targeted in the DCSync attack against the domain controller, and the ransomware binary download link.
+The investigation included:
+
+- Identifying the Stage 1 payload, the initiating process ID (PID), and the complete execution chain used to implant and execute the malware.
+- Investigating the scheduled task created for persistence and identifying the attacker-controlled C2 IP address and communication port.
+- Identifying the UAC bypass technique used after local administrator privileges were obtained and tracing the GitHub-hosted credential dumping tool.
+- Recovering dumped credentials from the compromised workstation and identifying remote files accessed during network share enumeration.
+- Investigating lateral movement by identifying newly discovered credentials, the target workstation, and the malicious commands executed remotely.
+- Analyzing credential dumping activity on the second compromised host.
+- Investigating the DCSync attack targeting the domain controller and identifying the ransomware payload downloaded during the final attack stage.
 
 ---
 
 ## 📚 Key Learnings
 
-The attack shows a fully matured threat actor operating with precision across multiple machines and privilege levels. Each phase builds on the last, credential dumping enables lateral movement, lateral movement enables domain controller access, and domain controller access enables ransomware deployment at scale. Elastic Stack correlation across endpoints is what makes this chain visible, connecting process executions on the first machine to attacker commands on the second and ultimately to the domain-level impact.
+This investigation demonstrated how modern attackers progress through multiple stages of an intrusion, beginning with initial access and ending with domain-wide compromise.
+
+By correlating endpoint telemetry in Elastic Stack, it was possible to reconstruct the complete attack timeline, including malware execution, persistence, privilege escalation, credential dumping, lateral movement, Active Directory compromise, and ransomware deployment.
+
+The exercise strengthened practical skills in endpoint investigation, process correlation, threat hunting, and enterprise incident response.
 
 ---
 
 ## 📸 Screenshots
 
-### Stage 1 Payload, Execution, Persistance
-#### Payload
+### Stage 1 Payload Execution & Persistence
+
+#### Initial Payload
+
 ![Payload 1](MEI_2.png)
+
 ---
-#### Execution
-![execution](MEI_3.png)
+
+#### Payload Execution
+
+![Execution](MEI_3.png)
+
 ---
-#### Persistence
+
+#### Scheduled Task Persistence
+
 ![Persistence](MEI_4.png)
+
 ---
 
-### C2 Connection IP & Port
-#### IP
-![Ip&Port](MEI_5.png)
-#### Port
-![Ip&Port](MEI_6.png)
+### Command-and-Control (C2) Connection
+
+#### C2 IP Address
+
+![IP](MEI_5.png)
+
+#### C2 Port
+
+![Port](MEI_6.png)
+
 ---
 
-### UAC bypass
-![UAC bypass](MEI_7.png)
+### User Account Control (UAC) Bypass
+
+![UAC Bypass](MEI_7.png)
+
 ---
 
-### Cred Dumping Tool
-![mimikatz tool](MEI_8.png)
+### Credential Dumping Tool
+
+![Credential Dumping Tool](MEI_8.png)
+
 ---
 
-### Username & Hash of Infected User
+### Compromised User Credentials
+
 #### Username
-![Username&Hash](MEI_9.png)
-#### Hash
-![hash](MEI_10.png)
+
+![Username](MEI_9.png)
+
+#### NTLM Hash
+
+![Hash](MEI_10.png)
+
 ---
 
-### Remote Share File Accessed
-![filename](MEI_11.png)
+### Remote File Share Access
+
+![Remote Share](MEI_11.png)
+
 ---
 
-### 2nd compromise Target
-#### Name
-![target 2](MEI_11.png)
+### Credentials Retrieved from Remote Share
+
+#### Username
+
+![Username](MEI_11.png)
+
 #### Password
-![target password](MEI_12.png)
+
+![Password](MEI_12.png)
+
 ---
 
-### Lateral Movement machine name
-![machine name](MEI_13.png)
+### Lateral Movement
 
-![exe file](MEI_14.png)
+#### Target Workstation
+
+![Target Machine](MEI_13.png)
+
+#### Remote Command Execution
+
+![Remote Execution](MEI_14.png)
+
 ---
 
-### Credentials Dump in target
-![cred dump](MEI_15.png)
+### Credential Dumping on Second Host
+
+![Credential Dump](MEI_15.png)
+
 ---
 
-### 3rd  payload 
-![3rd payload](MEI_16.png)
+### DCSync / Final Payload Stage
+
+![Final Payload](MEI_16.png)
+
 ---
 
-### Ransomeware Link
-![Ransome Link](MEI_17.png)
+### Ransomware Download
+
+![Ransomware Link](MEI_17.png)
+
 ---
 
 ### Result
+
 ![Result 1](Result1.png)
 
 ![Result 1.1](Result1.1.png)
 
 ![Result 1.2](Result1.2.png)
+
+---
+
+## 🧠 Skills Demonstrated
+
+- Elastic Stack (SIEM)
+- Endpoint Investigation
+- Process Tree Analysis
+- Persistence Detection
+- Command-and-Control (C2) Analysis
+- UAC Bypass Investigation
+- Credential Dumping Analysis
+- Lateral Movement Investigation
+- Active Directory Investigation
+- DCSync Analysis
+- Incident Response
+- Threat Hunting
+
+---
+
+## ✅ Conclusion
+
+This investigation provided hands-on experience reconstructing a complete enterprise intrusion, from the initial phishing compromise through ransomware deployment.
+
+By correlating endpoint events across multiple systems, I was able to trace attacker activity through persistence, privilege escalation, credential theft, lateral movement, Active Directory compromise, and the final ransomware stage, reinforcing practical SOC investigation and incident response skills.
+
+---
+
+> QXV0aG9yOiBodHRwczovL2dpdGh1Yi5jb20vSEctNzU=

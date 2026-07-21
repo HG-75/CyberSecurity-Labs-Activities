@@ -180,3 +180,7 @@ Windows provides rich telemetry through Sysmon and Security Logs, allowing defen
 ## ✅ Conclusion
 
 This investigation demonstrated how attackers establish Command & Control channels and implement multiple persistence mechanisms to maintain access within a compromised Windows environment. By leveraging Sysmon and Windows Security logs, it is possible to uncover attacker activity, reconstruct execution chains, and map observed behavior to the MITRE ATT&CK framework.
+
+---
+
+> QXV0aG9yOiBodHRwczovL2dpdGh1Yi5jb20vSEctNzU=

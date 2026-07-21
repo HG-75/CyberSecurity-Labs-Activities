@@ -3,127 +3,151 @@
 ---
 
 ## 📌 Overview
+
 In this project, I completed a phishing investigation scenario using a SOC Simulator integrated with Splunk.
 
-This lab gave me hands-on exposure to how a SOC Analyst works in real environments — monitoring alerts, investigating suspicious activities, and making evidence-based decisions.
+The investigation provided hands-on experience with the workflow of a Security Operations Center (SOC), including alert monitoring, phishing investigation, threat validation, and evidence-based incident response.
 
 ---
 
 ## 🎯 Objectives
 
-- Monitor and analyze alerts using a SIEM  
-- Identify phishing emails and malicious indicators  
-- Investigate suspicious URLs and attachments  
-- Validate threats using threat intelligence tools  
-- Document findings like a SOC Analyst  
+- Monitor and analyze security alerts using a SIEM
+- Identify phishing emails and malicious indicators
+- Investigate suspicious URLs and email attachments
+- Validate indicators of compromise (IOCs) using threat intelligence
+- Document investigation findings following SOC analyst practices
 
 ---
 
 ## 🧰 Tools Used
 
-- Splunk (SIEM)  
-- VirusTotal – for checking URLs, files, and indicators  
-- SOC Simulator  
+- **Splunk** – Security Information and Event Management (SIEM)
+- **VirusTotal** – IOC validation and threat intelligence
+- **SOC Simulator**
 
 ---
 
-## 🚨 What I Did
+## 🔬 Investigation Summary
 
-During this simulation, I worked in a role similar to an L1 SOC Analyst:
+During this simulation, I performed tasks similar to those of an L1 SOC Analyst by:
 
-- Monitored real-time alerts inside Splunk  
-- Investigated phishing-related alerts  
-- Analyzed:
-  - Email content  
-  - Suspicious links  
-  - Attachments  
-- Used VirusTotal to:
-  - Check malicious URLs  
-  - Scan suspicious files  
-  - Validate indicators against multiple security vendors  
-- Identified 5 phishing attacks correctly  
-- Closed alerts with proper justification and reasoning  
+- Monitoring security alerts generated within Splunk
+- Investigating phishing-related security events
+- Analyzing:
+  - Email content
+  - Embedded URLs
+  - File attachments
+- Validating suspicious URLs and files using VirusTotal
+- Correlating available evidence to determine whether alerts represented real threats or false positives
+- Successfully identifying and classifying five phishing incidents
+- Closing alerts with documented investigation notes and appropriate justifications
 
 ---
 
-## 🔄 How This Relates to Real SOC Work
+## 🔄 Mapping to SOC Operations
 
 ### 🔍 Alert Monitoring
-In real SOC environments, tools like Splunk collect logs and generate alerts.
 
-➡️ I monitored similar alerts through the SIEM dashboard.
+Security events were monitored through Splunk, simulating the continuous monitoring performed in a Security Operations Center.
 
 ---
 
 ### 🧠 Alert Triage
-SOC Analysts determine whether alerts are real threats or false positives.
 
-➡️ I analyzed each alert and made decisions based on evidence.
+Each alert was reviewed and classified based on available evidence to determine whether it represented malicious activity or a false positive.
 
 ---
 
-### 📧 Investigation
-Real investigations involve analyzing:
+### 📧 Phishing Investigation
 
-- Email headers  
-- URLs  
-- Attachments  
+Performed analysis of:
 
-➡️ I followed the same process during phishing analysis.
+- Email content
+- Suspicious URLs
+- File attachments
+
+to determine the legitimacy of each phishing alert.
 
 ---
 
 ### 🌐 Threat Intelligence Validation
-SOC Analysts use external tools to confirm whether indicators are malicious.
 
-➡️ I used VirusTotal to verify URLs and files.
-
----
-
-### 📝 Reporting
-Clear documentation is critical in SOC roles.
-
-➡️ I closed alerts with proper explanations and final verdicts.
+Validated indicators of compromise using VirusTotal to verify the reputation of URLs and files across multiple security vendors.
 
 ---
 
-## 🧠 Key Skills Demonstrated
+### 📝 Incident Documentation
 
-- SIEM usage (Splunk)  
-- Alert triaging  
-- Phishing detection & analysis  
-- Threat intelligence validation (VirusTotal)  
-- Threat investigation  
-- Analytical thinking  
-- SOC-style documentation  
+Recorded investigation outcomes and alert disposition using clear, evidence-based reasoning similar to standard SOC documentation practices.
+
+---
+
+## 🧠 Skills Demonstrated
+
+- SIEM Monitoring (Splunk)
+- Alert Triage
+- Phishing Detection & Analysis
+- Threat Intelligence Validation
+- IOC Analysis
+- Incident Investigation
+- Security Documentation
+- Analytical Thinking
 
 ---
 
 ## 📂 Evidence (Screenshots)
-The screenshots are attached to verify the workflow, investigation steps, and findings.
+
+### True Positive Alert Investigation
+
+![True +ve](SS2.png)
+
+---
+
+### False Positive Alert Investigation
+
+![False +ve](SS3.png)
+
+---
+
+### Escalated Security Alert
+
+![Escalation](SS5.png)
+
+---
+
+### Final Assessment
+
+![Result](SS7.png)
 
 ---
 
 ## 📊 Outcome
 
-- ✅ Successfully identified 5/5 phishing alerts  
-- ✅ Used Splunk for monitoring and investigation  
-- ✅ Used VirusTotal for threat validation  
-- ✅ Gained practical understanding of real SOC workflows  
+- ✅ Successfully investigated and classified **5/5 phishing alerts**
+- ✅ Performed alert monitoring and investigation using Splunk
+- ✅ Validated indicators using VirusTotal
+- ✅ Applied SOC analyst methodologies throughout the investigation
+- ✅ Strengthened practical experience with phishing detection and alert triage
 
 ---
 
-## 💡 What I Learned
+## 💡 Key Learnings
 
-- SOC analysis is a combination of tools + thinking  
-- Threat intelligence platforms like VirusTotal help confirm suspicions  
-- Not every alert is malicious — validation is essential  
-- Phishing attacks rely heavily on social engineering techniques  
-- Proper documentation is crucial in real SOC environments  
+- Effective SOC investigations combine technical analysis with evidence-based decision making.
+- Threat intelligence platforms such as VirusTotal provide valuable context for validating indicators of compromise.
+- Not every alert represents malicious activity, making accurate triage essential.
+- Phishing investigations require careful examination of emails, URLs, attachments, and supporting evidence.
+- Clear documentation and justification are fundamental components of professional incident response.
 
 ---
 
-## 🚀 Final Thoughts
-This simulation helped me understand how SOC Analysts operate in real environments — from alert monitoring to investigation, validation, and reporting.
+## 🚀 Conclusion
 
-It strengthened my ability to think critically, validate threats using real tools, and confidently handle phishing-related incidents.
+This investigation strengthened my understanding of Security Operations Center (SOC) workflows by providing practical experience with security monitoring, alert triage, phishing investigation, threat validation, and incident documentation.
+
+It reinforced the importance of combining technical analysis, threat intelligence, and evidence-based decision making to effectively investigate phishing incidents.
+
+---
+
+> QXV0aG9yOiBodHRwczovL2dpdGh1Yi5jb20vSEctNzU=
