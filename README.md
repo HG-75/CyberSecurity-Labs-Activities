@@ -19,3 +19,8 @@ Each directory includes:
 > - **Screenshots**
 
 Use the README in each folder to explore specific lab activities.
+
+---
+
+> QXV0aG9yOiBodHRwczovL2dpdGh1Yi5jb20vSEctNzU=
+
