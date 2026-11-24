@@ -1,20 +1,23 @@
-> /SOC Training
+> /SOC L2 Training
 
-# SOC Training
+This directory contains practical labs and exercises focused on Level 2 Security Operations Center (SOC) activities, with an emphasis on advanced security investigations, threat analysis, and incident response.
 
-This directory contains practical labs and exercises in **defensive cybersecurity** with a focus on Security Operations Center (SOC) workflows.  
-Activities include:  
+Activities include:
 
-- **Log Collection & Analysis** – monitoring and interpreting system, application, and security logs  
-- **Endpoint Detection & Response** – identifying suspicious activities and investigating alerts  
-- **Network Traffic Analysis** – examining packet captures and detecting anomalies  
-- **Intrusion Detection & Alerting** – recognizing patterns of malicious activity  
-- **Threat Hunting** – proactively searching for indicators of compromise across environments  
-- **Incident Response** – triaging alerts, investigating security events, and documenting findings  
-- **Compliance & Benchmarking** – auditing configurations against security standards  
+    Advanced Threat Detection – investigating suspicious activities, identifying attack patterns, and analysing security alerts.
 
-These labs provide hands-on experience in **monitoring, detecting, and responding to threats** as practiced in modern SOC environments.  
+    Security Incident Investigation – performing deeper investigations to determine the scope, impact, and root cause of security incidents.
 
----
+    Threat Hunting – proactively searching for advanced threats, indicators of compromise, and malicious behaviour.
+
+    Digital Forensics & Incident Response (DFIR) – analysing security evidence, investigating compromises, and supporting incident remediation.
+
+    Detection Engineering – developing and improving detection rules to identify malicious activities and reduce false positives.
+
+    Security Log Correlation – correlating events across multiple sources to identify complex attack scenarios.
+
+    Incident Handling & Reporting – documenting findings, assessing incident severity, and recommending appropriate response actions.
+
+These labs aim to strengthen practical skills in advanced threat investigation, security analysis, and incident handling as performed by SOC Level 2 analysts in modern security operations environments.
 
 > QXV0aG9yOiBodHRwczovL2dpdGh1Yi5jb20vSEctNzU=
